@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>日语助手 · 考试复习</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" href="/favicon-180.png">
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+  <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <symbol id="i-torii" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.5 3.25h17q.75 0 .51.71l-.52 1.58q-.24.71-.99.71h-15q-.75 0-.99-.71l-.52-1.58q-.24-.71.51-.71m2.75 3h1.5q.5 0 .5.5V9.5q0 .5.5.5h6.5q.5 0 .5-.5V6.75q0-.5.5-.5h1.5q.5 0 .5.5V9.5q0 .5.5.5h1.5q.5 0 .5.5V12q0 .5-.5.5h-1.5q-.5 0-.5.5v7.75q0 .5-.5.5h-1.5q-.5 0-.5-.5V13q0-.5-.5-.5h-6.5q-.5 0-.5.5v7.75q0 .5-.5.5h-1.5q-.5 0-.5-.5V13q0-.5-.5-.5h-1.5q-.5 0-.5-.5v-1.5q0-.5.5-.5h1.5q.5 0 .5-.5V6.75q0-.5.5-.5"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7-7v14"/></symbol>
+    <symbol id="i-panel-left-close" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18m7-6l-3-3l3-3"/></g></symbol>
+    <symbol id="i-panel-left-open" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18m5-12l3 3l-3 3"/></g></symbol>
+    <symbol id="i-notebook-tabs" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M2 6h4m-4 4h4m-4 4h4m-4 4h4"/><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M15 2v20m0-15h5m-5 5h5m-5 5h5"/></g></symbol>
+    <symbol id="i-list-checks" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5h8m-8 7h8m-8 7h8M3 17l2 2l4-4M3 7l2 2l4-4"/></symbol>
+    <symbol id="i-settings" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0a2.34 2.34 0 0 0 3.319 1.915a2.34 2.34 0 0 1 2.33 4.033a2.34 2.34 0 0 0 0 3.831a2.34 2.34 0 0 1-2.33 4.033a2.34 2.34 0 0 0-3.319 1.915a2.34 2.34 0 0 1-4.659 0a2.34 2.34 0 0 0-3.32-1.915a2.34 2.34 0 0 1-2.33-4.033a2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"/><circle cx="12" cy="12" r="3"/></g></symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 12l7-7l7 7m-7 7V5"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></g></symbol>
+    <symbol id="i-refresh-cw" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M3 12a9 9 0 0 1 9-9a9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5m5 4a9 9 0 0 1-9 9a9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></g></symbol>
+    <symbol id="i-rotate-ccw" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9a9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></g></symbol>
+    <symbol id="i-archive" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect width="20" height="5" x="2" y="3" rx="1"/><path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8m-10 4h4"/></g></symbol>
+    <symbol id="i-book-plus" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 7v6m-8 6.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20M9 10h6"/></symbol>
+    <symbol id="i-pencil" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497zM15 5l4 4"/></symbol>
+    <symbol id="i-trash-2" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11v6m4-6v6m5-11v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M12 15V3m9 12v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10l5 5l5-5"/></g></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m21 21l-4.34-4.34"/><circle cx="11" cy="11" r="8"/></g></symbol>
+    <symbol id="i-tag" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/></g></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></g></symbol>
+    <symbol id="i-loader-circle" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 1 1-6.219-8.56"/></symbol>
+    <symbol id="i-circle-check" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m16 9l-5.5 5.5L8 12"/></g></symbol>
+    <symbol id="i-inbox" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M22 12h-6l-2 3h-4l-2-3H2"/><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11"/></g></symbol>
+    <symbol id="i-circle-alert" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4m0 4h.01"/></g></symbol>
+    <symbol id="i-sparkles" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594zM20 2v4m2-2h-4"/><circle cx="4" cy="20" r="2"/></g></symbol>
+    <symbol id="i-chevron-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9l6 6l6-6"/></symbol>
+    <symbol id="i-chevron-up" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m18 15l-6-6l-6 6"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 6L6 18M6 6l12 12"/></symbol>
+    <symbol id="i-ellipsis" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></g></symbol>
+    <symbol id="i-book-open" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v16m8.001-2A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2a5 5 0 0 1 4-2z"/></symbol>
+    <symbol id="i-key-round" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z"/><circle cx="16.5" cy="7.5" r=".5" fill="currentColor"/></g></symbol>
+  </svg>
+
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand-row">
+        <div class="brand">
+          <svg class="icon brand-icon" aria-hidden="true"><use href="#i-torii"></use></svg>
+          <span>日语助手</span>
+        </div>
+        <button class="icon-btn" id="sidebar-collapse" title="收起侧栏" aria-label="收起侧栏">
+          <svg class="icon" aria-hidden="true"><use href="#i-panel-left-close"></use></svg>
+        </button>
+      </div>
+
+      <button class="new-chat" id="new-chat-btn">
+        <svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg>
+        新建对话
+      </button>
+
+      <nav class="side-nav">
+        <button class="nav-item" data-route="#/memos" id="nav-memos">
+          <svg class="icon" aria-hidden="true"><use href="#i-notebook-tabs"></use></svg>
+          错题本
+        </button>
+        <button class="nav-item" data-route="#/jobs" id="nav-jobs">
+          <svg class="icon" aria-hidden="true"><use href="#i-list-checks"></use></svg>
+          任务中心
+        </button>
+      </nav>
+
+      <div class="session-scroll" id="session-scroll">
+        <div class="session-group" id="active-group">
+          <div class="group-title">对话</div>
+          <div id="active-sessions"></div>
+        </div>
+        <div class="session-group" id="archived-group" hidden>
+          <div class="group-title">已归档</div>
+          <div id="archived-sessions"></div>
+        </div>
+        <div class="sidebar-empty" id="sidebar-empty" hidden>还没有会话</div>
+      </div>
+
+      <div class="sidebar-footer">
+        <button class="nav-item" id="settings-btn">
+          <svg class="icon" aria-hidden="true"><use href="#i-settings"></use></svg>
+          设置
+        </button>
+      </div>
+    </aside>
+
+    <button class="icon-btn sidebar-open" id="sidebar-open" hidden aria-label="展开侧栏">
+      <svg class="icon" aria-hidden="true"><use href="#i-panel-left-open"></use></svg>
+    </button>
+    <div class="sidebar-backdrop" id="sidebar-backdrop" aria-hidden="true"></div>
+
+    <main class="main" id="main">
+      <!-- Chat view -->
+      <section class="view" id="view-chat">
+        <header class="chat-header" id="chat-header">
+          <div class="chat-title-wrap">
+            <h1 id="chat-title">新对话</h1>
+            <span class="badge archived-badge" id="archived-badge" hidden>已归档</span>
+          </div>
+          <div class="chat-actions">
+            <span class="chip memo-status" id="memo-status-chip" hidden></span>
+            <button class="btn ghost" id="memo-trigger-btn" hidden><svg class="icon icon-sm" aria-hidden="true"><use href="#i-book-plus"></use></svg>整理为备忘录</button>
+            <button class="btn ghost" id="archive-btn" hidden><svg class="icon icon-sm" aria-hidden="true"><use href="#i-archive"></use></svg>归档</button>
+          </div>
+        </header>
+
+        <div class="chat-scroll" id="chat-scroll">
+          <div class="chat-column">
+            <div class="messages" id="messages"></div>
+          </div>
+        </div>
+
+        <div class="composer-area" id="composer-area">
+          <div class="composer-column">
+            <div class="context-bar" id="context-bar">
+              <label class="ctx-item" for="ctx-n">上下文
+                <input type="number" id="ctx-n" class="ctx-input" min="0" max="50" step="1" value="5">
+                轮
+              </label>
+              <label class="switch-label">
+                <span class="switch">
+                  <input type="checkbox" id="ctx-enabled" checked>
+                  <span class="slider"></span>
+                </span>
+                携带上下文
+              </label>
+              <span class="ctx-hint">仅影响接下来发送的消息</span>
+            </div>
+            <div class="composer" id="composer">
+              <textarea id="chat-input" rows="1" placeholder="输入你的日语问题…" maxlength="100000"></textarea>
+              <button class="send-btn" id="send-btn" disabled title="发送" aria-label="发送">
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"></use></svg>
+              </button>
+            </div>
+            <div class="composer-hint">Enter 发送 · Shift + Enter 换行</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Memos view -->
+      <section class="view page-view" id="view-memos" hidden>
+        <div class="page-inner">
+          <header class="page-header">
+            <div>
+              <h1>错题本</h1>
+              <p class="page-sub">面向日语考试复习，只收录单词与语法</p>
+            </div>
+            <a class="btn primary" id="export-btn" href="/api/memos/export.md" download><svg class="icon icon-sm" aria-hidden="true"><use href="#i-download"></use></svg>导出日语书</a>
+          </header>
+
+          <div class="memo-toolbar">
+            <div class="segmented" id="memo-category-tabs">
+              <button data-cat="" class="active">全部</button>
+              <button data-cat="单词">单词</button>
+              <button data-cat="语法">语法</button>
+            </div>
+            <div class="input-with-icon tag-wrap">
+              <svg class="icon" aria-hidden="true"><use href="#i-tag"></use></svg>
+              <input id="memo-tag-filter" class="field small" placeholder="标签筛选（回车）" autocomplete="off">
+            </div>
+            <div class="input-with-icon search-wrap">
+              <svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg>
+              <input id="memo-search" class="field search" placeholder="搜索标题、正文、备注…" autocomplete="off">
+            </div>
+          </div>
+
+          <div class="memo-grid" id="memo-list"></div>
+
+          <div class="empty-state" id="memo-empty" hidden>
+            <div class="empty-icon"><svg class="icon" aria-hidden="true"><use href="#i-book-open"></use></svg></div>
+            <h2>错题本还是空的</h2>
+            <p>把会话归档后，点击「整理为备忘录」，LLM 会自动提炼单词和语法知识点。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Jobs view -->
+      <section class="view page-view" id="view-jobs" hidden>
+        <div class="page-inner">
+          <header class="page-header">
+            <div>
+              <h1>任务中心</h1>
+              <p class="page-sub">备忘录整理任务的状态、日志与重试</p>
+            </div>
+          </header>
+
+          <div class="job-list" id="job-list"></div>
+
+          <div class="empty-state" id="job-empty" hidden>
+            <div class="empty-icon"><svg class="icon" aria-hidden="true"><use href="#i-list-checks"></use></svg></div>
+            <h2>暂无整理任务</h2>
+            <p>归档会话后，在会话页手动触发「整理为备忘录」即可在这里查看进度。</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Session context menu -->
+  <div class="context-menu" id="session-menu" hidden></div>
+
+  <!-- Settings drawer -->
+  <div class="drawer-overlay" id="settings-overlay" hidden></div>
+  <aside class="drawer" id="settings-drawer" hidden aria-label="设置">
+    <header class="drawer-header">
+      <h2>设置</h2>
+      <button class="icon-btn" id="settings-close" aria-label="关闭设置">
+        <svg class="icon" aria-hidden="true"><use href="#i-x"></use></svg>
+      </button>
+    </header>
+    <div class="drawer-body">
+      <section class="settings-section">
+        <h3>连接</h3>
+        <p class="section-hint">OpenAI 兼容接口。默认模型作为所有场景的兜底，可在下方为场景单独指定。</p>
+        <label class="field-label" for="set-base-url">接口地址（Base URL）</label>
+        <input id="set-base-url" class="field" placeholder="https://api.openai.com/v1" autocomplete="off">
+        <label class="field-label" for="set-api-key">API Key</label>
+        <div class="input-with-action">
+          <input id="set-api-key" class="field" type="password" autocomplete="off" placeholder="sk-…">
+          <button class="text-btn" id="toggle-key" type="button">显示</button>
+        </div>
+        <label class="field-label" for="set-model">模型</label>
+        <div class="field-with-button">
+          <input id="set-model" class="field" list="model-options" placeholder="点击「获取模型」或手动输入" autocomplete="off">
+          <button class="btn ghost small" id="fetch-models-btn" type="button"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-refresh-cw"></use></svg>获取模型</button>
+        </div>
+        <datalist id="model-options"></datalist>
+        <div class="model-hint" id="model-hint"></div>
+        <label class="field-label" for="set-temperature">Temperature</label>
+        <input id="set-temperature" class="field narrow" type="number" min="0" max="2" step="0.1" value="0.7">
+        <div class="test-row">
+          <button class="btn ghost" id="test-connection-btn" type="button"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-key-round"></use></svg>测试连接</button>
+          <span class="test-result" id="test-result" hidden></span>
+        </div>
+      </section>
+
+      <section class="settings-section">
+        <h3>场景模型</h3>
+        <p class="section-hint">为不同调用场景指定模型以控制 token 与费用；留空则使用默认模型。获取模型后均可下拉选择。</p>
+        <label class="field-label" for="set-chat-model">聊天问答</label>
+        <input id="set-chat-model" class="field" list="model-options" placeholder="留空使用默认模型" autocomplete="off">
+        <label class="field-label" for="set-memo-model">错题本整理（Map / Reduce）</label>
+        <input id="set-memo-model" class="field" list="model-options" placeholder="留空使用默认模型" autocomplete="off">
+        <label class="field-label" for="set-title-model">会话标题总结</label>
+        <input id="set-title-model" class="field" list="model-options" placeholder="留空使用默认模型" autocomplete="off">
+        <label class="field-label" for="set-reasoning-effort">聊天思考强度</label>
+        <select id="set-reasoning-effort" class="field select">
+          <option value="">默认（不发送参数）</option>
+          <option value="low">低（low）</option>
+          <option value="medium">中（medium）</option>
+          <option value="high">高（high）</option>
+        </select>
+        <p class="section-hint">仅作用于聊天问答。默认不发送 reasoning_effort，由模型自行决定；错题本与标题不发送该参数，以控制费用。</p>
+      </section>
+
+      <section class="settings-section">
+        <h3>上下文默认值</h3>
+        <div class="inline-fields">
+          <label class="field-label" for="set-default-rounds">默认轮数
+            <input id="set-default-rounds" class="field narrow" type="number" min="0" max="50" step="1" value="5">
+          </label>
+          <label class="switch-label">
+            <span class="switch">
+              <input type="checkbox" id="set-default-include" checked>
+              <span class="slider"></span>
+            </span>
+            默认携带上下文
+          </label>
+        </div>
+        <p class="section-hint">聊天框上的设置只临时生效，不会写回这里。</p>
+      </section>
+
+      <section class="settings-section">
+        <h3>自动归档</h3>
+        <div class="inline-fields">
+          <label class="field-label" for="set-auto-rounds">最大轮数
+            <input id="set-auto-rounds" class="field narrow" type="number" min="1" step="1" value="100">
+          </label>
+          <label class="field-label" for="set-auto-chars">最大字符数
+            <input id="set-auto-chars" class="field narrow" type="number" min="100" step="100" value="100000">
+          </label>
+        </div>
+        <p class="section-hint">每次回答完成后检测，超过任一阈值即自动归档。</p>
+      </section>
+
+      <section class="settings-section">
+        <h3>整理切片</h3>
+        <div class="inline-fields">
+          <label class="field-label" for="set-chunk-chars">每片字符数
+            <input id="set-chunk-chars" class="field narrow" type="number" min="1000" step="1000" value="20000">
+          </label>
+          <label class="field-label" for="set-chunk-overlap">片间重叠
+            <input id="set-chunk-overlap" class="field narrow" type="number" min="0" step="100" value="1000">
+          </label>
+        </div>
+        <p class="section-hint">长会话会切片后分别提炼，再做合并去重。</p>
+      </section>
+
+      <section class="settings-section">
+        <h3>提示词</h3>
+        <label class="field-label" for="set-chat-prompt">日语教学问答</label>
+        <textarea id="set-chat-prompt" class="field prompt" rows="5"></textarea>
+        <label class="field-label" for="set-memo-prompt">错题本整理（必须输出 JSON）</label>
+        <textarea id="set-memo-prompt" class="field prompt" rows="14"></textarea>
+        <label class="field-label" for="set-title-prompt">会话标题总结</label>
+        <textarea id="set-title-prompt" class="field prompt" rows="3"></textarea>
+      </section>
+    </div>
+    <footer class="drawer-footer">
+      <button class="btn primary" id="settings-save"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-circle-check"></use></svg>保存设置</button>
+    </footer>
+  </aside>
+
+  <!-- Rename modal -->
+  <div class="modal-overlay" id="rename-overlay" hidden>
+    <div class="modal">
+      <h2>重命名会话</h2>
+      <input id="rename-input" class="field" maxlength="100" autocomplete="off">
+      <div class="modal-actions">
+        <button class="btn ghost" id="rename-cancel">取消</button>
+        <button class="btn primary" id="rename-ok">保存</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Confirm modal -->
+  <div class="modal-overlay" id="confirm-overlay" hidden>
+    <div class="modal">
+      <p class="confirm-message" id="confirm-message"></p>
+      <div class="modal-actions">
+        <button class="btn ghost" id="confirm-cancel">取消</button>
+        <button class="btn danger" id="confirm-ok">确认</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Memo edit modal -->
+  <div class="modal-overlay" id="memo-edit-overlay" hidden>
+    <div class="modal wide">
+      <h2>编辑错题知识点</h2>
+      <div class="memo-edit-title" id="memo-edit-title"></div>
+      <label class="field-label" for="memo-edit-category">分类</label>
+      <select id="memo-edit-category" class="field">
+        <option value="单词">单词</option>
+        <option value="语法">语法</option>
+      </select>
+      <label class="field-label" for="memo-edit-tags">标签（逗号分隔）</label>
+      <input id="memo-edit-tags" class="field" autocomplete="off">
+      <label class="field-label" for="memo-edit-note">我的错题备注</label>
+      <textarea id="memo-edit-note" class="field" rows="4" placeholder="记录自己错在哪、容易混淆什么…"></textarea>
+      <div class="modal-actions">
+        <button class="btn ghost" id="memo-edit-cancel">取消</button>
+        <button class="btn primary" id="memo-edit-save">保存</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-container" id="toast-container"></div>
+
+  <script src="/vendor/marked.min.js"></script>
+  <script src="/vendor/purify.min.js"></script>
+  <script type="module" src="/js/app.js"></script>
+</body>
+</html>
